@@ -4,15 +4,6 @@ template<class T> TTree<T>::TTree() {
 	head = nullptr;
 }
 
-/*template <class T> std::ostream& operator<<(std::ostream& os, const TTree<T>& tree) {
-	std::shared_ptr <TTreeItem<T>> item = tree.head; 
-	while (item != nullptr) {
-		os << *item;
-		item = item->GetNext();
-	}
-	return os;
-}*/
-
 template<class T> void TTree<T>::push(std::shared_ptr<T> && obj) {
 	std::shared_ptr<TTreeItem<T>> other (new TTreeItem<T>(obj));
 	std::shared_ptr<TTreeItem<T>> old = this->head;
@@ -33,12 +24,3 @@ template<class T> void TTree<T>::print()
 		item = item->GetNext();
 	}
 }
-
-/*template <class T> std::shared_ptr<T> TTree<T>::pop() {
-	std::shared_ptr<T> result;
-	if (head != nullptr) {
-        std::shared_ptr<TTreeItem> old_head = head->Getnext();
-        head->remove();
-    }
-}*/
-/*template <class T> TTree<T>::~TTree() {}*//*#include "Triangle.h"template class TTree<Triangle>;template std::ostream& operator<<(std::ostream& os, TTree<Triangle> &tree);#include "Foursquare.h"template class TTree<Foursquare>;template std::ostream& operator<<(std::ostream& os, TTree<Foursquare> &tree);#include "Octagon.h"template class TTree<Octagon>;template std::ostream& operator<<(std::ostream& os, TTree<Octagon> &tree);*/
