@@ -16,8 +16,7 @@ int main() {
     tree.push(std::shared_ptr<Triangle>(new Triangle));
     tree.push(std::shared_ptr<Foursquare>(new Foursquare));
     tree.push(std::shared_ptr<Octagon>(new Octagon));
-	tree.print();
-//    std::cout << tree << std::endl;
-	system("pause");
+    tree.print();
+    system("pause");
     return 0;
-}
+}
