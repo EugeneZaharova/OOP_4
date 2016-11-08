@@ -71,5 +71,3 @@ template <class A> std::ostream& operator<<(std::ostream& os, const TTreeItem<A>
     os << "---------------------" << std::endl << *obj.triangle << *obj.octagon << *obj.foursquare << "----------------------" << std::endl;
     return os;
 }
-
-/* #include "Triangle.h"template class TTreeItem<Triangle>;template std::ostream& operator<<(std::ostream& os, TTreeItem<Triangle> &tree);#include "Foursquare.h"template class TTreeItem<Foursquare>;template std::ostream& operator<<(std::ostream& os, TTreeItem<Foursquare> &tree);#include "Octagon.h"template class TTreeItem<Octagon>;template std::ostream& operator<<(std::ostream& os, TTreeItem<Octagon> &tree);*/
